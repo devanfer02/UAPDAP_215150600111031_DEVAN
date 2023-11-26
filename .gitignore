@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 git
+ui_kit.txt
 .VSCodeCounter

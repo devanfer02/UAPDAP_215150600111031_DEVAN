@@ -27,18 +27,20 @@ export default function App() {
     <>
       <BrowserRouter>
         <Navbar/>
-        <section>
+        <>
           <Routes>
             { pages.map(page => (
               <Route
                 path={page.path}
                 element={
-                  <Suspense fallback={<Loading/>}>{page.render}</Suspense>
+                  <Suspense fallback={<Loading/>}>
+                    {page.render}
+                  </Suspense>
                 }
               />
             ))}
           </Routes>
-        </section>
+        </>
       </BrowserRouter>
     </>
   )
