@@ -22,7 +22,7 @@ export default function Socials() {
       { links.map(link => (
         <div className="mx-2 p-2" key={link.path}>
           <Link to={link.path}>
-            <Icon icon={link.icon} width={'30px'} className="hover:text-my-orange transition duration-300 ease-in-out"/>
+            <Icon icon={link.icon} width={'30px'} className="hover:text-my-orange text-white transition duration-300 ease-in-out"/>
           </Link>
         </div>
       ))}

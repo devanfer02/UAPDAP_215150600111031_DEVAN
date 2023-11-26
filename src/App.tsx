@@ -29,8 +29,9 @@ export default function App() {
         <Navbar/>
         <>
           <Routes>
-            { pages.map(page => (
+            { pages.map((page, index) => (
               <Route
+                key={index}
                 path={page.path}
                 element={
                   <Suspense fallback={<Loading/>}>
