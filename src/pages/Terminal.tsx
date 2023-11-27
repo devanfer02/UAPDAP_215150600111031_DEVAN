@@ -10,13 +10,33 @@ filesystem.makedir('totally_secret')
 export default function Terminal() {
   const [ input, setInput ] = useState("")
   const [ output, setOutput ] = useState("")
+  const [ terminal, setTerminal ] = useState("$")
   const inputRef = useRef<HTMLInputElement|null>(null)
 
 
   const handleInput = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.ctrlKey && event.keyCode === 68) {
+      setTerminal('$ ')
+      setInput('')
+    }
+
     if (event.key !== 'Enter') return 
 
     let out = 'Unknown Bash Command'
+
+    if (terminal === '[sudo]pass:' && input === 'exit') {
+      setTerminal('$ ')
+      return
+    }
+
+    if (terminal === '[sudo]pass:' && input !== 'zypbohia78') {
+      out = 'Sorry, wrong passsword'
+      const newOutput = terminal + '  ' + input + '\n' + out + '\n' + output + '\n'
+
+      setOutput(newOutput)
+      setInput('')
+      return
+    }
 
     if (input === 'whoami') out = filesystem.whoami()
     if (input === '') out = ''
@@ -80,7 +100,18 @@ export default function Terminal() {
       }
     }
 
-    const newOutput = '$ ' + input + '\n' + out + '\n' + output + '\n'
+    if (input === 'sudo su') {
+      // BIKIN REQUIRED PASSWORD
+      setTerminal('[sudo]pass:')
+      out = ''
+    }
+
+    if (input === 'exit') {
+      setTerminal('$ ')
+      out = ''
+    }
+
+    const newOutput = terminal + '  ' + input + '\n' + out + '\n' + output + '\n'
 
     setOutput(newOutput)
     setInput('')
@@ -111,7 +142,7 @@ export default function Terminal() {
           }}
         >
           <h1 className="text-my-orange">
-            $&nbsp;&nbsp;
+            {terminal}&nbsp;&nbsp;
           </h1>
           <input 
             ref={inputRef}
