@@ -22,7 +22,7 @@ function Hero() {
               "It's not always as we wanted, but we grow <span className="text-berry">stronger</span> when we <span className="text-berry">break</span>."
             </blockquote>
             <div className="flex flex-wrap">
-              <Button text="Contact Me" link="/contact"/>
+              <Button text="Contact Me" link="/about"/>
               <Socials fontColor="text-my-orange" hoverColor="text-white"/>
             </div>
           </div>
@@ -33,7 +33,7 @@ function Hero() {
                   <path fill="#FF782D" d="M34.3,-65.3C43.6,-54.1,49.5,-43.1,57.6,-32.2C65.8,-21.3,76.1,-10.7,79.4,1.9C82.8,14.6,79.2,29.1,70.4,38.7C61.5,48.2,47.3,52.7,34.6,54.1C22,55.5,11,53.9,-1.8,56.9C-14.5,60,-29.1,67.8,-41.7,66.3C-54.3,64.9,-64.9,54.3,-71.7,41.7C-78.5,29.1,-81.4,14.5,-80.1,0.8C-78.7,-13,-73.1,-26,-63.2,-33.3C-53.4,-40.6,-39.4,-42.3,-28.2,-52.4C-17,-62.4,-8.5,-80.8,2,-84.3C12.5,-87.9,25.1,-76.5,34.3,-65.3Z" transform="translate(100 100) scale(1.1)" />
                 </svg>
               </span>
-              <img src={hero} alt="devan" className="mx-auto max-w-full max-h-[500px] brightness-90 " style={{zIndex: '2'}}/>
+              <img src={hero} alt="devan" className="mx-auto max-w-full max-h-[500px] brightness-90 " style={{zIndex: '2'}} draggable="false"/>
             </div>
           </div>  
         </div>

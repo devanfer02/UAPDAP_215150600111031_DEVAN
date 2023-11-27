@@ -18,7 +18,8 @@ export default {
         'berry': '#C83F49'
       },
       backgroundImage: {
-        network: 'url(../assets/images/network-white.png)'
+        network: 'url(../assets/images/network-white.png)',
+        network2: 'url(../assets/images/network2.png)'
       },
       screens: {
         '2xl': '1320px'

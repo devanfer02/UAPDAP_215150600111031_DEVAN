@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 
 class Node {
   constructor(
@@ -27,6 +27,10 @@ class Tree {
     const index = this.currNode.children.findIndex((dir) => dir.name === dirName)
 
     return index
+  }
+
+  whoami(): string {
+    return 'Devan Ferrel'
   }
 
   rmdir(dirName: string): boolean {
@@ -65,10 +69,25 @@ class Tree {
 }
 
 export default function Terminal() {
-  const [ filesystem, setFilesystem ] = useState(new Tree())
-  return (
-    <section>
+  const filesystem = new Tree()
+  console.log(filesystem)
 
+  useEffect(() => {
+    document.title = 'Terminal App'
+  })
+
+  return (
+    <section className="pt-[5em] bg-my-navy text-my-white h-screen">
+      <h1 className="text-center mb-3 text-bold lg:text-2xl">
+        Bash Terminal
+      </h1>
+      <section className="px-28 w-full">
+        <input className={`bg-transparent w-full h-full border border-white p-4 
+          resize-none focus:outline-none cursor-block`}/>
+        <div className="" id="terminal-history">
+
+        </div>
+      </section>
     </section>
   )
 }
