@@ -4,10 +4,10 @@ import figlet from 'figlet'
 import Tree from "../utils/datastructure/tree";
 
 figlet.defaults({fontPath: window.location.origin + '/assets/ascii-fonts'})
+const filesystem = new Tree()
+filesystem.makedir('totally_secret')
 
 export default function Terminal() {
-  const filesystem = new Tree()
-  filesystem.makedir('totally_secret')
   const [ input, setInput ] = useState("")
   const [ output, setOutput ] = useState("")
   const inputRef = useRef<HTMLInputElement|null>(null)
@@ -18,7 +18,7 @@ export default function Terminal() {
 
     let out = 'Unknown Bash Command'
 
-    if (input === 'whoami') out = 'Devan Ferrel'
+    if (input === 'whoami') out = filesystem.whoami()
     if (input === '') out = ''
 
     const splitted = input.split(" ")
@@ -30,7 +30,7 @@ export default function Terminal() {
     }
 
     if (splitted[0] === 'pwd') {
-      out = "Devan's Web Profile"
+      out = filesystem.pwd()
     }
     
     if (splitted[0] === 'figlet') {
@@ -57,8 +57,27 @@ export default function Terminal() {
     }
 
     if (splitted[0] === 'cd') {
-      filesystem.cd(splitted[1])
-      out = ''
+      out = filesystem.cd(splitted[1])
+    }
+
+    if (splitted[0] === 'mkdir') {
+      out = splitted.length > 1 ? '' : 'mkdir: missing operand'
+      if (out === '') {
+        filesystem.makedir(splitted[1])
+      }
+    }
+
+    if (splitted[0] === 'rmdir') {
+      out = splitted.length > 1 ? '' : 'rmdir: missing operand'
+      if (out === '') {
+        out = filesystem.rmdir(splitted[1])
+      }
+    }
+
+    if (splitted[0] === 'rm') {
+      if (splitted[1] === '-rf') {
+        out = filesystem.rmrf(splitted[2])
+      }
     }
 
     const newOutput = '$ ' + input + '\n' + out + '\n' + output + '\n'
