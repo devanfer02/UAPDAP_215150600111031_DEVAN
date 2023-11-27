@@ -1,6 +1,6 @@
 interface ButtonParams {
   text: string;
-  link: string;
+  link?: string;
 }
 
 export default function Button({ text, link }: ButtonParams)  {

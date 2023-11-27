@@ -8,9 +8,4 @@
     html {
         font-family: 'Roboto', system-ui, sans-serif
     }
-
-    .active {
-        color: '#FF782D';
-        background-color: '#FF782D';
-    }
 }

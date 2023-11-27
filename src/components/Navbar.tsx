@@ -1,6 +1,5 @@
 import { Icon } from '@iconify/react'
-import { useEffect, useState } from 'react'
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 
 const navItems= [
   {
@@ -14,50 +13,80 @@ const navItems= [
     path: '/about'
   },
   {
-    name: 'Contact',
-    icon: 'fluent:contact-card-20-filled',
-    path: '/contact'
+    name: 'Work',
+    icon: 'mdi:work',
+    path: '/works'
   },
   {
     name: 'Portfolio',
-    icon: 'mdi:briefcase',
+    icon: 'ph:code-fill',
     path: '/portfolio'
+  },
+  {
+    name: 'Terminal',
+    icon: 'ant-design:code-filled',
+    path: '/terminal'
   },
 ]
 
 export default function Navbar() {
-  const [ isScrolled, setIsScrolled ] = useState(window.scrollY > 0)
+  const location = useLocation().pathname
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0)
-    }
+  const decider = {
+    getBgColor: () => {
+      if (location === '/about') return 'bg-my-navy'
+  
+      return 'bg-my-white'
+    },
+    getTextColor: () => {
+      if (location === '/about') return 'text-white'
 
-    window.addEventListener('scroll', handleScroll)
-    console.log(isScrolled)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
+      return 'text-my-navy'
+    },
+    getActive: (path: string) => {
+      if (location === path) return 'text-my-orange'
+
+      return decider.getTextColor()
     }
-  }, [isScrolled])
+  }
 
   return (
     <nav 
       className='flex flex-col 
         items-center lg:justify-center gap-y-4
-        fixed h-max mt-auto lg:right-[2%] z-50 top-0
+        fixed h-max mt-auto lg:right-[1.5%] z-50 top-0
         w-full lg:w-16 lg:max-w-md lg:h-screen'
     >
       <div 
         className={`flex w-full lg:flex-col items-center 
         justify-between lg:justify-center gap-y-10 px-10 md:px-40
-        lg:px-0 h-[60px] ${isScrolled ? 'bg-my-white/30' : 'bg-my-white'} 
-        lg:bg-my-white lg:h-max py-8 backdrop-blur-sm text-3xl
+        lg:px-0 h-[60px] ${decider.getBgColor()} 
+        lg:h-max py-8 backdrop-blur-sm text-3xl
         lg:text-xl lg:rounded-full`}
       >
         { navItems.map((nav, index) => (
-          <NavLink className='' to={nav.path} key={index}>
+          <NavLink to={nav.path} key={index} className="group">
+            <div className="absolute pr-14 right-0 hidden lg:group-hover:flex ">
+              <div className={
+                `${decider.getBgColor()} relative flex 
+                items-center py-1 px-5 rounded-xl
+                font-bold -mr-2`}
+              >
+                <div className={`text-[14px] ${decider.getTextColor()}`}>
+                  {nav.name}
+                </div>
+              </div>
+            </div>
             <div>
-              <Icon icon={nav.icon} width={'30px'} className="hover:text-my-orange transition duration-300 ease-in-out"/>
+              <Icon 
+                icon={nav.icon} 
+                width={'30px'} 
+                className={
+                  `hover:text-my-orange ${decider.getActive(nav.path)} 
+                  transition duration-300 ease-in-out
+                  relative flex items-center`
+                }
+              />
             </div>
           </NavLink>
         ))}

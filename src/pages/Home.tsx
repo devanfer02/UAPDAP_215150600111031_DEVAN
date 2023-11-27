@@ -5,7 +5,7 @@ import Button from "../components/Button"
 
 function Hero() {
   return (
-    <section id="hero" className="pt-36 bg-my-navy text-my-white bg-network bg-center lg:bg-left md:pb-[6.25rem]">
+    <section id="hero" className="pt-[7.3em] bg-my-navy text-my-white bg-network bg-center lg:bg-left md:pb-[6.25rem]">
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full self-center px-4 lg:w-1/2">
@@ -22,8 +22,8 @@ function Hero() {
               "It's not always as we wanted, but we grow <span className="text-berry">stronger</span> when we <span className="text-berry">break</span>."
             </blockquote>
             <div className="flex flex-wrap">
-              <Button text="Contact Me" link=""/>
-              <Socials/>
+              <Button text="Contact Me" link="/contact"/>
+              <Socials fontColor="text-my-orange" hoverColor="text-white"/>
             </div>
           </div>
           <div className="w-full self-end px-4 lg:w-1/2">
