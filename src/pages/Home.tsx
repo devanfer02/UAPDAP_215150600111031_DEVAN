@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import hero from '../assets/images/profile/hero.png'
-import Socials from "../components/SocialIcons"
+import Socials from "../components/Socials"
 import Button from "../components/Button"
 
 function Hero() {

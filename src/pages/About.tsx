@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import Socials from "../components/SocialIcons"
+import Socials from "../components/Socials"
 
 export default function About() {
   useEffect(() => {

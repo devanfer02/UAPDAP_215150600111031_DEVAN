@@ -29,7 +29,7 @@ export default function Socials( {fontColor, hoverColor}: SocialParams ) {
   return (
     <section className="flex my-auto">
       { links.map(link => (
-        <div className="mx-2 p-2" key={link.path}>
+        <div className={`mx-2 p-2`} key={link.path}>
           <Link to={link.path} className={`hover:${hoverColor}`} target="_blank">
             <Icon 
               icon={link.icon} 

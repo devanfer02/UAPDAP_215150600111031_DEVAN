@@ -1,91 +1,113 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
+import { Icon } from '@iconify/react'
+import figlet from 'figlet'
+import Tree from "../utils/datastructure/tree";
 
-class Node {
-  constructor(
-      public name: string, 
-      public children: Node[],
-      public parrent: Node | null
-    ) {}
-}
-
-class Tree {
-  private root: Node;
-  private currNode: Node;
-  constructor(
-    root: Node = new Node('/', [], null),
-    currNode: Node = root
-  ) { 
-    this.root = root
-    this.currNode = currNode
-  }
-
-  makedir(dirName: string): void {
-    this.currNode.children.push(new Node(dirName, [], this.currNode))
-  }
-
-  private findIndex(dirName: string): number {
-    const index = this.currNode.children.findIndex((dir) => dir.name === dirName)
-
-    return index
-  }
-
-  whoami(): string {
-    return 'Devan Ferrel'
-  }
-
-  rmdir(dirName: string): boolean {
-    const index = this.findIndex(dirName)
-
-    if (index !== -1) {
-      this.currNode.children.splice(index, 1)
-      return true 
-    } 
-
-    return false
-  }
-
-  cd(dirName: string): boolean {
-    switch(dirName) {
-      case '..' : {
-        if (this.currNode === this.root) return false
-
-        this.currNode = this.currNode.parrent!
-        return true
-      }
-      
-        case '.' :
-          return true 
-        
-        default : {
-          const index = this.findIndex(dirName)
-
-          if (index === -1) return false
-
-          this.currNode = this.currNode.children[index]
-          return true
-        }
-    }
-  }
-}
+figlet.defaults({fontPath: window.location.origin + '/assets/ascii-fonts'})
 
 export default function Terminal() {
   const filesystem = new Tree()
-  console.log(filesystem)
+  filesystem.makedir('totally_secret')
+  const [ input, setInput ] = useState("")
+  const [ output, setOutput ] = useState("")
+  const inputRef = useRef<HTMLInputElement|null>(null)
+
+
+  const handleInput = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key !== 'Enter') return 
+
+    let out = 'Unknown Bash Command'
+
+    if (input === 'whoami') out = 'Devan Ferrel'
+    if (input === '') out = ''
+
+    const splitted = input.split(" ")
+
+    if (splitted[0] === 'clear') {
+      setOutput('')
+      setInput('')
+      return
+    }
+
+    if (splitted[0] === 'pwd') {
+      out = "Devan's Web Profile"
+    }
+    
+    if (splitted[0] === 'figlet') {
+      figlet.text(splitted[1], {
+        font: 'ANSI Shadow',
+        horizontalLayout: "default",
+        verticalLayout: "default"
+      } ,(err, data) => {
+        if (err) {
+          console.error(err)
+        }
+        
+        const newOutput = output + '\n' + '$ ' + input + '\n' + data + '\n'  
+        console.log(newOutput)
+        setOutput(newOutput)
+        setInput('')
+
+        return
+      })
+    }
+
+    if (splitted[0] === 'ls') {
+      out = splitted.length > 1 ? filesystem.ls(splitted[1]) : filesystem.ls() 
+    }
+
+    if (splitted[0] === 'cd') {
+      filesystem.cd(splitted[1])
+      out = ''
+    }
+
+    const newOutput = '$ ' + input + '\n' + out + '\n' + output + '\n'
+
+    setOutput(newOutput)
+    setInput('')
+  }
 
   useEffect(() => {
-    document.title = 'Terminal App'
-  })
+    document.title = 'Terminal'
+
+    if (inputRef.current !== undefined) {
+      inputRef.current!.focus()
+    }
+  }, [])
 
   return (
     <section className="pt-[5em] bg-my-navy text-my-white h-screen">
-      <h1 className="text-center mb-3 text-bold lg:text-2xl">
-        Bash Terminal
-      </h1>
-      <section className="px-28 w-full">
-        <input className={`bg-transparent w-full h-full border border-white p-4 
-          resize-none focus:outline-none cursor-block`}/>
-        <div className="" id="terminal-history">
-
+      <div className="text-center flex">
+        <Icon 
+          icon={'mdi:ssh'} 
+          width={'80px'}
+          className="text-center mb-3 mx-auto text-my-orange"
+        />
+      </div>
+      <section className="px-10 lg:px-28 w-full">
+        <div 
+          className="flex p-4"
+          onClick={() => {
+            inputRef.current!.focus()
+          }}
+        >
+          <h1 className="text-my-orange">
+            $&nbsp;&nbsp;
+          </h1>
+          <input 
+            ref={inputRef}
+            className={`bg-transparent w-full h-full
+            resize-none focus:outline-none`}
+            type="text"
+            value={input}
+            onChange={event => setInput(event.target.value)}
+            onKeyDown={handleInput}
+          />
+        </div>
+        <div className="overflow-y-scroll h-96">
+          <div className="py-4 pl-4 whitespace-pre-line" id="terminal-history">
+            { output }
+          </div>
         </div>
       </section>
     </section>
