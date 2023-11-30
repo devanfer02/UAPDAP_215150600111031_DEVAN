@@ -106,6 +106,17 @@ class Tree {
   }
 
   cd(dirName: string): string {
+    if(dirName.includes("/") && dirName.indexOf("/") !== dirName.length - 1) {
+      const dirs = dirName.split("/")
+      const dirToGo = dirs[0]
+      const newDirs = dirs.splice(1)
+      this.cd(dirToGo)
+      this.cd(newDirs.join("/"))
+      return ''
+    }
+    if (dirName.includes("/")) {
+      dirName = dirName.substring(0, dirName.indexOf("/"))
+    }
     switch(dirName) {
       case '..' : {
         if (this.currNode === this.root) return ''

@@ -22,7 +22,7 @@ export default function About() {
               My name is Devan Ferrel, you can call me Devan.
               I'm currently enrolled as a student in Universitas Brawijaya, majoring
               Information Technology Education with NIM 225150600111031. I'm from Bekasi, West Java.
-              I have many hobbies, such as coding, solving programming problems, listening to music
+              I have many hobbies, such as coding, solving programming problems, play bullet and blitz chess, listening to music
               and watch some animes. Mainly, i do backend stuff with golang or typescript, but 
               you can definitely count me on simple frontend work.
             </p>
