@@ -34,12 +34,12 @@ export default function Navbar() {
 
   const decider = {
     getBgColor: () => {
-      if (location === '/about') return 'bg-my-navy'
+      if (location === '/about' || location === '/portfolio') return 'bg-my-navy'
   
       return 'bg-my-white'
     },
     getTextColor: () => {
-      if (location === '/about') return 'text-white'
+      if (location === '/about' || location === '/portfolio') return 'text-white'
 
       return 'text-my-navy'
     },

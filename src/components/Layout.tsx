@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutParams) {
   return (
     <>
       <Navbar/>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout">
         <motion.div className="h-full">
           <Transition key={path}/>
           { children }

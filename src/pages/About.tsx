@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import Socials from "../components/Socials"
 
-export default function About() {
+export default function AboutPage() {
   useEffect(() => {
     document.title = 'About Me'
   })
@@ -21,8 +21,9 @@ export default function About() {
             <p className="font-medium text-base text-my-navy max-w-xl lg:text-lg">
               My name is Devan Ferrel, you can call me Devan.
               I'm currently enrolled as a student in Universitas Brawijaya, majoring
-              Information Technology Education with NIM 225150600111031. I'm from Bekasi, West Java.
-              I have many hobbies, such as coding, solving programming problems, play bullet and blitz chess, listening to music
+              Information Technology Education. I'm from Bekasi, West Java.
+              I have many hobbies, such as coding, solving programming problems, playing bullet and blitz chess, 
+              listening to music
               and watch some animes. Mainly, i do backend stuff with golang or typescript, but 
               you can definitely count me on simple frontend work.
             </p>
@@ -35,7 +36,7 @@ export default function About() {
               Let's connect through my social media so we can discuss about 
               our hobbies, especially if we share same hobby and make a project together!
             </p>
-            <Socials fontColor="text-my-navy" hoverColor="text-my-orange"/>
+            <Socials fontColor="navy" hoverColor="orange"/>
           </div>
         </div>
       </div>

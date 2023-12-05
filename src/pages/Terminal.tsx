@@ -3,11 +3,12 @@ import { Icon } from '@iconify/react'
 
 import Tree from "../utils/datastructure/tree";
 import { executeBash } from "../utils/algorithm/bash";
+import ParticleContainer from "../components/ParticleContainer";
 
 const filesystem = new Tree()
 filesystem.makedir('totally_secret')
 
-export default function Terminal() {
+export default function TerminalPage() {
   const [ input, setInput ] = useState("")
   const [ output, setOutput ] = useState("")
   const [ terminal, setTerminal ] = useState("$")
@@ -36,6 +37,7 @@ export default function Terminal() {
 
   return (
     <section className="pt-[5em] bg-my-navy text-my-white h-screen">
+      <ParticleContainer lineColor="orange" squareColor="white" front={true}/>
       <div className="text-center flex">
         <Icon 
           icon={'mdi:ssh'} 
@@ -43,7 +45,7 @@ export default function Terminal() {
           className="text-center mb-3 mx-auto text-my-orange"
         />
       </div>
-      <section className="px-10 lg:px-28 w-full">
+      <section className="px-10 lg:px-28 w-full ">
         <div 
           className="flex p-4"
           onClick={() => {

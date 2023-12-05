@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Icon } from '@iconify/react'
+import { colorTailwind, Color } from "../utils/color";
 
 interface SocialParams {
   fontColor: string;
@@ -26,16 +27,17 @@ const links = [
 ]
 
 export default function Socials( {fontColor, hoverColor}: SocialParams ) {
+
   return (
     <section className="flex my-auto">
       { links.map(link => (
-        <div className={`mx-2 p-2`} key={link.path}>
-          <Link to={link.path} className={`hover:${hoverColor}`} target="_blank">
+        <div className={`mr-3 mt-1 lg:mt-0 lg:mx-2 lg:p-2`} key={link.path}>
+          <Link to={link.path} className={`hover:${colorTailwind[hoverColor as keyof Color]}`} target="_blank">
             <Icon 
               icon={link.icon} 
               width={'35px'}
               className={`
-                ${fontColor} hover:${hoverColor} 
+                ${colorTailwind[fontColor as keyof Color]} hover:${colorTailwind[hoverColor as keyof Color]}
                 transition duration-300 ease-in-out`
               }/>
           </Link>

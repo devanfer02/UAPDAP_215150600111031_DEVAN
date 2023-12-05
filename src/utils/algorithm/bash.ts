@@ -1,7 +1,4 @@
-import figlet from 'figlet'
 import Tree from "../datastructure/tree"
-
-figlet.defaults({fontPath: window.location.origin + '/assets/ascii-fonts'})
 
 export const executeBash = (
     event: React.KeyboardEvent<HTMLElement>,
@@ -55,25 +52,6 @@ export const executeBash = (
     if (splitted[0] === 'pwd') {
       out = filesystem.pwd()
     }
-    
-    if (splitted[0] === 'figlet') {
-      figlet.text(splitted[1], {
-        font: 'ANSI Shadow',
-        horizontalLayout: "default",
-        verticalLayout: "default"
-      } ,(err, data) => {
-        if (err) {
-          console.error(err)
-        }
-        
-        const newOutput = output + '\n' + '$ ' + input + '\n' + data + '\n'  
-        console.log(newOutput)
-        setOutput(newOutput)
-        setInput('')
-
-        return
-      })
-    }
 
     if (splitted[0] === 'ls') {
       out = splitted.length > 1 ? filesystem.ls(splitted[1]) : filesystem.ls() 
@@ -101,6 +79,10 @@ export const executeBash = (
       if (splitted[1] === '-rf') {
         out = filesystem.rmrf(splitted[2])
       }
+    }
+
+    if(splitted[0] === 'touch') {
+      out = filesystem.touch(splitted[1])
     }
 
     if (splitted[0] === './me') {

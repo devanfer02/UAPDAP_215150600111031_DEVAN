@@ -4,33 +4,33 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Loading from './pages/Loading'
 import Layout from './components/Layout'
 
-const Home = lazy(() => import('./pages/Home'))
-const About = lazy(() => import('./pages/About'))
-const Works = lazy(() => import('./pages/Works'))
-const Portfolio = lazy(() => import('./pages/Portfolio'))
-const Terminal = lazy(() => import('./pages/Terminal'))
+const HomePage = lazy(() => import('./pages/Home'))
+const AboutPage = lazy(() => import('./pages/About'))
+const WorksPage = lazy(() => import('./pages/Works'))
+const PortfolioPage = lazy(() => import('./pages/Portfolio'))
+const TerminalPage = lazy(() => import('./pages/Terminal'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 const pages = [
   {
     path: '/',
-    render: <Home/>
+    render: <HomePage/>
   },
   {
     path: '/about',
-    render: <About/>
+    render: <AboutPage/>
   },
   {
     path: '/works',
-    render: <Works/>
+    render: <WorksPage/>
   },
   {
     path: '/portfolio',
-    render: <Portfolio/>
+    render: <PortfolioPage/>
   },
   {
     path: '/terminal',
-    render: <Terminal/>
+    render: <TerminalPage/>
   },
   {
     path: '*',

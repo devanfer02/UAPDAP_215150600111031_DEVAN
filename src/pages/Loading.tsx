@@ -3,7 +3,6 @@ const dotNames = [
 ]
 
 export default function Loading() {
-  
   return (
     <section className="bg-my-navy h-screen">
       <div className="flex items-center justify-center h-full">

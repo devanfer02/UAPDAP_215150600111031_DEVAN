@@ -31,7 +31,8 @@ export default function Transition() {
             ease: 'easeInOut'
           }
         } 
-      />
+      >
+      </motion.div>
       <motion.div 
         className="fixed top-0 bottom-0 right-full w-screen h-screen z-20 bg-[#071229]"
         variants={variants}
