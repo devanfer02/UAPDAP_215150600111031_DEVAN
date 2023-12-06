@@ -20,7 +20,7 @@ export default function WorksPage() {
         <div className="container pt-[1em] pb-[3em]">
           { organization.map((org, index) => (
             <div key={index} className="lg:mx-16 bg-my-orange flex flex-wrap my-7 border-2 border-my-white rounded-lg">
-              <div className="bg-white  flex justify-center items-center w-full lg:w-1/5 ">
+              <div className="bg-white flex justify-center items-center w-full lg:w-1/5 rounded-lg">
                 <img src={org.src} alt="" className="max-h-[150px] lg:mx-auto rounded-lg" />
               </div>
               <div className="w-full lg:w-4/5 self-center p-8">

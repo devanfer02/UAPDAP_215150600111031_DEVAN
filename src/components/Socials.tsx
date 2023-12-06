@@ -30,11 +30,12 @@ export default function Socials( {fontColor, hoverColor}: SocialParams ): JSX.El
 
   return (
     <section className="flex my-auto">
-      { links.map(link => (
+      { links.map((link, index) => (
         <Link 
           to={link.path} 
           className={`hover:${colorTailwind[hoverColor as keyof Color]} mr-3 mt-1 lg:mt-0 lg:mx-2 lg:p-2`} 
           target="_blank"
+          key={index}
         >
           <Icon 
             icon={link.icon} 
