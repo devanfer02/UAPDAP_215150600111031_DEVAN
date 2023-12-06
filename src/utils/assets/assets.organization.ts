@@ -39,13 +39,11 @@ export const organization = [
       so it follows the event theme, coordinate and organize to make short film for specific events
       and also design poster for annual event like new year, christmas and others. 
       You can find the short movies through this link :
-      <a 
-        href="${'https://www.youtube.com/@devanferrel9605/videos'}"
-        className="text-blue-500"
-      >
-      https://www.youtube.com/@devanferrel9605/videos
-      </a>
       `
-    )
+    ),
+    link: [
+      'https://www.youtube.com/@devanferrel9605/videos',
+      'short movies'
+    ]
   }
 ]

@@ -84,7 +84,7 @@ export default function AboutPage() {
   })
 
   return (
-    <section id="about" className="pt-[7.3em] pb-28 lg:px-28 bg-network3 bg-cover lg:bg-center">
+    <section id="about" className="pt-[7.3em] pb-28 lg:px-28 bg-network3 bg-contain lg:bg-center">
       <div className="container ">
         <h1 className="font-bold text-my-orange text-4xl mb-4 uppercase text-center">
           About Me
