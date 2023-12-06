@@ -74,7 +74,7 @@ export default function PortfolioPage() {
       <div className="w-full pb-100 mt-5 px-5 mx-auto mb-10 gap-5 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 inline-grid">
         { listPortfolios.map((portfolio, index) => (
           <Card className="group" key={index}>
-            <Link to={portfolio.link} target="_blank">
+            <Link to={portfolio.link} target="_blank" className="flex justify-center items-center bg-my-orange">
               <img 
                 src={portfolio.src} 
                 alt={portfolio.name} 

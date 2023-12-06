@@ -73,7 +73,7 @@ export const portfolios: Portfolio[] = [
     desc: (
       `
       I made this calculator as a lab assignment of User Interface Design class to implement data structure and algorithm, 
-      spesifically stack data structure to convert infix expression to postfix and evalute it.
+      spesifically stack data structure to convert infix expression to postfix and evaluate it.
       `
     ),
     src: calc,
