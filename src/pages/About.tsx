@@ -60,6 +60,8 @@ function AboutInfo() {
           listening to music
           and watch some animes. Mainly, i do backend stuff with golang or typescript, but 
           you can definitely count me on simple frontend work.
+          I also like to teach people because it helped me to communicate better, express
+          my thoughts clearly to them and understand more about my knowledge that i already learned.
         </p>
       </div>
       <div className="w-full px-4 lg:w-1/2 lg:px-8">

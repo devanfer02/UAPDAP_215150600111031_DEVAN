@@ -75,16 +75,12 @@ export default function PortfolioPage() {
         { listPortfolios.map((portfolio, index) => (
           <Card className="group" key={index}>
             <Link to={portfolio.link} target="_blank">
-              <div 
-                className="blur-load duration-200 ease-in-out rounded-t-lg"
-                style={{ backgroundImage: `url:(${portfolio.small})` }}
-              >
-                <img 
-                  src={portfolio.src} 
-                  alt={portfolio.name} 
-                  className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg" 
-                />
-              </div>
+              <img 
+                src={portfolio.src} 
+                alt={portfolio.name} 
+                className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg" 
+                loading="lazy"
+              />
             </Link>
             <div className="items-center justify-center my-2 container">
               <h1 

@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react'
+import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from "react-router-dom"
 
 const navItems= [
@@ -30,17 +31,30 @@ const navItems= [
 ]
 
 export default function Navbar(): JSX.Element {
+  const isMobileScrolled = () => {
+    return window.scrollY > 0 && window.innerWidth < 1200
+  }
+
+  const [ isScrolled, setIsScrolled ] = useState(isMobileScrolled())
   const location = useLocation().pathname
 
   const decider = {
     getBgColor: () => {
-      if (location === '/about' || location === '/portfolio') return 'bg-my-navy'
-  
+      if (location === '/about' || location === '/portfolio') {
+        if (isScrolled) return 'bg-my-navy/20'
+        return 'bg-my-navy'
+      }
+      
+      if (isScrolled) return 'bg-my-white/20'
       return 'bg-my-white'
     },
     getTextColor: () => {
-      if (location === '/about' || location === '/portfolio') return 'text-white'
+      if (location === '/about' || location === '/portfolio') {
+        if (isScrolled) return 'text-my-navy'
+        return 'text-white'
+      }
 
+      if (isScrolled) return 'text-my-white'
       return 'text-my-navy'
     },
     getActive: (path: string) => {
@@ -50,12 +64,25 @@ export default function Navbar(): JSX.Element {
     }
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(isMobileScrolled())
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <nav 
       className='flex flex-col 
         items-center lg:justify-center gap-y-4
-        fixed h-max mt-auto lg:right-[1.5%] z-50 top-0
-        w-full lg:w-16 lg:max-w-md lg:h-screen'
+        fixed h-max mt-auto lg:right-[1.5%] z-40 top-0
+        w-full lg:w-16 lg:max-w-md lg:h-screen
+        '
     >
       <div 
         className={`flex w-full lg:flex-col items-center 

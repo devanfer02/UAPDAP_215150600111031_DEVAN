@@ -22,12 +22,12 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-my-navy">
-      <div className="flex flex-wrap w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <footer className="bg-my-navy z-50">
+      <div className="flex flex-wrap w-full mx-auto max-w-screen-xl p-4">
         <span className="text-sm text-my-orange sm:text-center">
           © 2023 Devan Ferrel
         </span>
-        <div className="flex flex-wrap ml-auto">
+        <div className="flex flex-wrap ml-auto lg:mr-10">
           { socials.map((social, index) => (
             <Link  
               className=""

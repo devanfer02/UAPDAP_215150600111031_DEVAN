@@ -3,12 +3,13 @@ import Socials from "../components/Socials"
 import Button from "../components/Button"
 import preview from '../assets/images/projects/terminal2.png'
 import hero from '../assets/images/profile/hero.png'
+import { works } from "../utils/assets/assets.home"
 
 function Hero() {
   return (
     <section 
       id="home" 
-      className="pt-[7.3em] bg-my-navy text-my-white bg-network bg-center lg:bg-left md:pb-[6.25rem]"
+      className="pt-[7.3em] bg-my-navy pb-10 text-my-white bg-network bg-center lg:bg-left md:pb-[6.25rem]"
     >
       <div className="container">
         <div className="flex flex-wrap">
@@ -52,17 +53,36 @@ function Hero() {
 }
 
 function Works() {
-  // isinya penjelasan singkat organisasi dan portfolio
   return (
-    <section className="bg-my-navy pt-[5em]">
-
+    <section className="bg-my-navy py-[7.3em] bg-network4 bg-cover bg-no-repeat bg-center text-white">
+      <div className="container">
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-1/2 self-center pr-5 ">
+            <div className="columns-2 space-y-5 gap-5">
+              { works.map((work, index) => (
+                <img src={work.src} alt="" className="" key={index} />
+              ))}
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 self-center mt-5 lg:pl-5">
+            <h1 className="text-2xl lg:text-3xl font-bold">
+              Projects
+            </h1>
+            <p className="w-4/5">
+              I've been working on many projects and side projects.
+              Every project i have worked on, i always learned something new.
+            </p>
+            <Button text="Projects" size="md" link="/portfolio"/>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
 
 function Terminal() {
   return (
-    <section className="bg-my-navy pt-[5em] text-white bg-network2 lg:bg-cover bg-center">
+    <section className="bg-my-navy py-[7em] text-white bg-network2 lg:bg-cover bg-center">
       <div className="container py-5 ">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/2 self-center pr-5">
