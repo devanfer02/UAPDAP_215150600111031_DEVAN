@@ -3,12 +3,13 @@ import { ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import Transition from "./Transition";
 import Navbar from './Navbar'
+import Footer from "./Footer";
 
 interface LayoutParams {
   children: ReactNode
 }
 
-export default function Layout({ children }: LayoutParams) {
+export default function Layout({ children }: LayoutParams): JSX.Element {
   const path = useLocation().pathname
 
   return (
@@ -20,6 +21,7 @@ export default function Layout({ children }: LayoutParams) {
           { children }
         </motion.div>
       </AnimatePresence>
+      <Footer/>
     </>
   )
 }

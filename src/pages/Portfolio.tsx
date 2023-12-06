@@ -5,7 +5,6 @@ import Card from "../components/Card"
 import ParticleContainer from "../components/ParticleContainer"
 
 
-
 export default function PortfolioPage() {
   const [ listPortfolios, setListPortfolios ] = useState(portfolios)
   const [ active, setActive ] = useState(categories[2])
@@ -31,6 +30,22 @@ export default function PortfolioPage() {
 
   useEffect(() => {
     document.title = 'Portfolio'
+
+    const blurDivs = document.querySelectorAll('.blur-load')
+
+    blurDivs.forEach(div => {
+      const img = div.querySelector('img')
+
+      function loaded() {
+        div.classList.add('loaded')
+      }
+
+      if (img!.complete) {
+        loaded()
+      } else {
+        img!.addEventListener('load', loaded)
+      }
+    })
   })
 
   return (
@@ -56,20 +71,25 @@ export default function PortfolioPage() {
           </p>
         ))}
       </div>
-      <div className="w-full pb-100 mt-5 px-5 mx-auto mb-10 gap-5 lg:columns-3 columns-1 space-y-5">
+      <div className="w-full pb-100 mt-5 px-5 mx-auto mb-10 gap-5 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 inline-grid">
         { listPortfolios.map((portfolio, index) => (
-          <Card className="group " key={index}>
+          <Card className="group" key={index}>
             <Link to={portfolio.link} target="_blank">
-              <img 
-                src={portfolio.src} 
-                alt={portfolio.name} 
-                className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg" 
-              />
+              <div 
+                className="blur-load duration-200 ease-in-out rounded-t-lg"
+                style={{ backgroundImage: `url:(${portfolio.small})` }}
+              >
+                <img 
+                  src={portfolio.src} 
+                  alt={portfolio.name} 
+                  className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg" 
+                />
+              </div>
             </Link>
             <div className="items-center justify-center my-2 container">
               <h1 
                 className="text-my-orange uppercase font-bold 
-                group-hover:text-my-white duration-200 ease-in-out 
+                group-hover:text-my-lightgray duration-200 ease-in-out 
                 text-center xl:text-lg text-sm md:text-md"
                 >
                 {portfolio.name}

@@ -10,6 +10,27 @@
         scroll-behavior: smooth;
     }
 
+    .blur-load::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+    
+    .blur-load {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    } 
+    
+    .blur-load.loaded > img {
+        opacity: 1;
+    }
+    
+    .blur-load > img {
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+    }
+
     .dot {
         opacity: 0;
         animation: showHideDot 2.5s ease-in-out infinite;

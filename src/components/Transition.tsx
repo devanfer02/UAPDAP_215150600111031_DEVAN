@@ -15,7 +15,7 @@ const variants = {
   }
 }
 
-export default function Transition() {
+export default function Transition(): JSX.Element {
   return (
     <>
       <motion.div 

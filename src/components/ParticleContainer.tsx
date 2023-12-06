@@ -10,7 +10,9 @@ interface ParticleParams {
   front: boolean;
 }
 
-export default function ParticleContainer({lineColor, squareColor, front}: ParticleParams) {
+export default function ParticleContainer(
+  {lineColor, squareColor, front}: ParticleParams
+): JSX.Element {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine)
   }, [])

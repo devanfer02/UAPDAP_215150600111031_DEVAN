@@ -29,7 +29,7 @@ const navItems= [
   },
 ]
 
-export default function Navbar() {
+export default function Navbar(): JSX.Element {
   const location = useLocation().pathname
 
   const decider = {

@@ -1,7 +1,8 @@
 import { useEffect } from "react"
-import hero from '../assets/images/profile/hero.png'
 import Socials from "../components/Socials"
 import Button from "../components/Button"
+import preview from '../assets/images/projects/terminal2.png'
+import hero from '../assets/images/profile/hero.png'
 
 function Hero() {
   return (
@@ -25,7 +26,7 @@ function Hero() {
               "It's not always as we wanted, but we grow <span className="text-berry">stronger</span> when we <span className="text-berry">break</span>."
             </blockquote>
             <div className="lg:flex lg:flex-wrap">
-              <Button text="Contact Me" link="/about"/>
+              <Button text="About Me" link="/about" size="md"/>
               <Socials fontColor="orange" hoverColor="white"/>
             </div>
           </div>
@@ -50,6 +51,40 @@ function Hero() {
   )
 }
 
+function Works() {
+  // isinya penjelasan singkat organisasi dan portfolio
+  return (
+    <section className="bg-my-navy pt-[5em]">
+
+    </section>
+  )
+}
+
+function Terminal() {
+  return (
+    <section className="bg-my-navy pt-[5em] text-white bg-network2 lg:bg-cover bg-center">
+      <div className="container py-5 ">
+        <div className="flex flex-wrap">
+          <div className="w-full lg:w-1/2 self-center pr-5">
+            <div className="relative bg-my-orange rounded-xl">
+              <img src={preview} alt="terminal" className="h-full z-90" draggable="false"/>
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 self-center mt-5 lg:pl-5">
+            <h1 className="text-2xl lg:text-3xl font-bold">
+              Check out my mini terminal!
+            </h1>
+            <p className="">
+              Built with tree data structure to mimick linux filesystem.
+            </p>
+            <Button text="Mini Terminal" size="md" link="/terminal"/>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 export default function HomePage() {
   useEffect(() => {
     document.title = 'Home'
@@ -58,6 +93,8 @@ export default function HomePage() {
   return (
     <>
       <Hero/>
+      <Works/> 
+      <Terminal/>
     </>
   )
 }

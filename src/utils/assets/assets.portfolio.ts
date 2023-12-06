@@ -7,6 +7,18 @@ import gokers from '../../assets/images/projects/gokers2.png'
 import soschat from '../../assets/images/projects/soschat2.png'
 import farewell from '../../assets/images/projects/farewell.png'
 import natal from '../../assets/images/projects/natal.png'
+import kbmdsi from '../../assets/images/projects/kbmdsi.png'
+
+// SLOW LOADING AHH
+import agilsmall from '../../assets/images/projects/small/agilportfolio-small.jpg'
+import calcsmall from '../../assets/images/projects/small/calculator-small.jpg'
+import certismall from '../../assets/images/projects/small/findcerti-small.jpg'
+import pbosmall from '../../assets/images/projects/small/guigame-small.jpg'
+import dapchallsmall from '../../assets/images/projects/small/praktikum-small.jpg'
+import gokerssmall from '../../assets/images/projects/small/gokers2-small.jpg'
+import soschatsmall from '../../assets/images/projects/small/soschat2-small.jpg'
+import farewellsmall from '../../assets/images/projects/small/farewell-small.jpg'
+import natalsmall from '../../assets/images/projects/small/natal-small.jpg'
 
 export const categories = ['Website', 'API', 'All', 'Java App', 'Design']
 
@@ -16,6 +28,7 @@ export interface Portfolio {
   desc: string;
   src: string;
   link: string;
+  small: string;
 }
 
 export const portfolios: Portfolio[] = [
@@ -29,7 +42,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: agil,
-    link: 'https://hamdallaagil.vercel.app/'
+    link: 'https://hamdallaagil.vercel.app/',
+    small: agilsmall
   },
   {
     name: "Find Your Rabraw22 Certificate",
@@ -41,7 +55,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: certi,
-    link: 'https://devanfer02.github.io/find_your_rabraw22_certi/'
+    link: 'https://devanfer02.github.io/find_your_rabraw22_certi/',
+    small: certismall
   },
   {
     name: "DDM Game",
@@ -53,7 +68,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: pbo,
-    link: 'https://github.com/devanfer02/DDM-Game'
+    link: 'https://github.com/devanfer02/DDM-Game',
+    small: pbosmall
   },
   {
     name: "DAP Challenge",
@@ -64,7 +80,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: dapchall,
-    link: 'https://devanfer02.github.io/dap-praktikum-challenge/'
+    link: 'https://devanfer02.github.io/dap-praktikum-challenge/',
+    small: dapchallsmall
   },
   {
     name: "Calculator",
@@ -76,7 +93,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: calc,
-    link: 'https://devanfer02.github.io/calculator-app/'
+    link: 'https://devanfer02.github.io/calculator-app/',
+    small: calcsmall
   },
   {
     name: "Gokers",
@@ -88,7 +106,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: gokers,
-    link: 'https://github.com/devanfer02/gokers/'
+    link: 'https://github.com/devanfer02/gokers/',
+    small: gokerssmall
   },
   {
     name: 'Soschat',
@@ -99,7 +118,21 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: soschat,
-    link: 'https://github.com/devanfer02/soschat-be/'
+    link: 'https://github.com/devanfer02/soschat-be/',
+    small: soschatsmall
+  },
+  {
+    name: 'KBMDSI FILKOM Website',
+    category: categories[0],
+    desc: (
+      `
+      As a backend developer, i partake in developing backend API and CMS using tech stack
+      laravel and mysql.
+      `
+    ),
+    src: kbmdsi,
+    link: 'https://kbmdsi.ub.ac.id/',
+    small: soschatsmall
   },
   {
     name: 'Farewell Poster',
@@ -110,7 +143,8 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: farewell,
-    link: ''
+    link: '',
+    small: farewellsmall
   },
   {
     name: 'Christmas Poster',
@@ -121,6 +155,7 @@ export const portfolios: Portfolio[] = [
       `
     ),
     src: natal,
-    link: ''
+    link: '',
+    small: natalsmall
   }, 
 ]
