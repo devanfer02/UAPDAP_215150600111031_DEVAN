@@ -82,7 +82,7 @@ function Works() {
 
 function Terminal() {
   return (
-    <section className="bg-my-navy py-[7em] text-white bg-network2 lg:bg-cover bg-center">
+    <section className="bg-my-navy py-[7em] text-white bg-network2 bg-cover bg-center">
       <div className="container py-5 ">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-1/2 self-center pr-5">
