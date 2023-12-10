@@ -122,10 +122,6 @@ function Terminal() {
 }
 
 export default function HomePage() {
-  useEffect(() => {
-    document.title = 'Home'
-  })
-
   return (
     <>
       <Hero/>

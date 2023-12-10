@@ -28,8 +28,6 @@ export default function TerminalPage() {
   }
  
   useEffect(() => {
-    document.title = 'Terminal'
-
     if (inputRef.current !== undefined) {
       inputRef.current!.focus()
     }

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollTop from "./components/ScrollTop";
 
 import Loading from './pages/Loading'
 import Layout from './components/Layout'
@@ -14,41 +15,50 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 const pages = [
   {
     path: '/',
-    render: <HomePage/>
+    render: <HomePage/>,
+    title: 'Home'
   },
   {
     path: '/about',
-    render: <AboutPage/>
+    render: <AboutPage/>,
+    title: 'About Me'
   },
   {
     path: '/works',
-    render: <WorksPage/>
+    render: <WorksPage/>,
+    title: 'Works'
   },
   {
     path: '/portfolio',
-    render: <PortfolioPage/>
+    render: <PortfolioPage/>,
+    title: 'Works'
   },
   {
     path: '/terminal',
-    render: <TerminalPage/>
+    render: <TerminalPage/>,
+    title: 'Terminal'
   },
   {
     path: '*',
-    render: <NotFound/>
+    render: <NotFound/>,
+    title: 'Page Not Found'
   }
 ]
 
 export default function App() {
+
   return (
     <>
       <BrowserRouter>
         <Routes>
+          
           { pages.map((page, index) => (
             <Route
               key={index}
               path={page.path}
               element={
-                <Layout>
+                <Layout pageTitle={page.title}>
+                  <ScrollTop/>
                   <Suspense fallback={<Loading/>}>
                     {page.render}
                   </Suspense>

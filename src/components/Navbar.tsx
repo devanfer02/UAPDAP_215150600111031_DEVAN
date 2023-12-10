@@ -108,6 +108,7 @@ export default function Navbar(): JSX.Element {
               <Icon 
                 icon={nav.icon} 
                 width={'30px'} 
+                
                 className={
                   `hover:text-my-orange ${decider.getActive(nav.path)} 
                   transition duration-300 ease-in-out

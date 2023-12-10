@@ -27,27 +27,6 @@ export default function PortfolioPage() {
 
   }, [active])
 
-
-  useEffect(() => {
-    document.title = 'Portfolio'
-
-    const blurDivs = document.querySelectorAll('.blur-load')
-
-    blurDivs.forEach(div => {
-      const img = div.querySelector('img')
-
-      function loaded() {
-        div.classList.add('loaded')
-      }
-
-      if (img!.complete) {
-        loaded()
-      } else {
-        img!.addEventListener('load', loaded)
-      }
-    })
-  })
-
   return (
     <section id="portfolio" className="pt-[7em] pb-28 lg:px-28 bg-cover bg-center z-100">
       <ParticleContainer lineColor="navy" squareColor="navy" front={false}/>

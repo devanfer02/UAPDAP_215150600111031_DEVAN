@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import meback from '../assets/images/organization/bcc.jpg'
 import Socials from "../components/Socials"
 import TechStack from "../components/TechStack"
@@ -79,10 +78,6 @@ function AboutInfo() {
 }
 
 export default function AboutPage() {
-  useEffect(() => {
-    document.title = 'About Me'
-  })
-
   return (
     <section id="about" className="pt-[7.3em] pb-28 lg:px-28 bg-network3 bg-contain lg:bg-center">
       <div className="container ">

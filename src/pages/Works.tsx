@@ -1,10 +1,7 @@
-import { useEffect } from "react"
 import { organization } from "../utils/assets/assets.organization"
 
 export default function WorksPage() {
-  useEffect(() => {
-    document.title = 'My Works'
-  })
+  
   return (
     <section 
       id="works" 
@@ -20,8 +17,8 @@ export default function WorksPage() {
         <div className="container pt-[1em] pb-[3em]">
           { organization.map((org, index) => (
             <div key={index} className="lg:mx-16 bg-my-orange flex flex-wrap my-7 border-2 border-my-white rounded-lg">
-              <div className="bg-white flex justify-center items-center w-full lg:w-1/5 rounded-lg">
-                <img src={org.src} alt="" className="max-h-[150px] lg:mx-auto rounded-lg" />
+              <div className="bg-white flex justify-center items-center w-full lg:w-1/5">
+                <img src={org.src} alt="" className="max-h-[150px] lg:mx-auto rounded-l-lg" />
               </div>
               <div className="w-full lg:w-4/5 self-center p-8">
                 <h1 className="uppercase text-2xl text-my-navy font-bold mb-5">
@@ -33,7 +30,7 @@ export default function WorksPage() {
                 >
                 </p>
                 { org.link && (
-                  <a href={org.link[0]} className="hover:text-white hover:underline duration-200">
+                  <a href={org.link[0]} className="hover:text-blue-400 text-white hover:underline duration-200">
                     { org.link[1] }
                   </a>
                 )}
