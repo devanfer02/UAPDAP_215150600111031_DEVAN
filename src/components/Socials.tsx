@@ -33,7 +33,7 @@ export default function Socials( {fontColor, hoverColor}: SocialParams ): JSX.El
       { links.map((link, index) => (
         <Link 
           to={link.path} 
-          className={`hover:${colorTailwind[hoverColor as keyof Color]} mr-3 mt-1 lg:mt-0 lg:mx-2 lg:p-2`} 
+          className={`mr-3 mt-1 lg:mt-0 lg:mx-2 lg:p-2`} 
           target="_blank"
           key={index}
         >
@@ -41,9 +41,8 @@ export default function Socials( {fontColor, hoverColor}: SocialParams ): JSX.El
             icon={link.icon} 
             width={'35px'}
           className={`
-              ${colorTailwind[fontColor as keyof Color]} hover:${colorTailwind[hoverColor as keyof Color]}
-              transition duration-300 ease-in-out`
-            }/>
+              ${colorTailwind[fontColor as keyof Color]} hover:${colorTailwind[hoverColor as keyof Color]} 
+              transition duration-300 ease-in-out`}/>
         </Link>
         
       ))}

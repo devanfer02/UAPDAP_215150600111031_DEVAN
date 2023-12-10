@@ -130,7 +130,7 @@ export const portfolios: Portfolio[] = [
     category: categories[4],
     desc: (
       `
-      Farewell poster is an poster design made for christmas event Rohkris SMAN 14 Bekasi.
+      Christmas poster is an poster design made for christmas event Rohkris SMAN 14 Bekasi.
       `
     ),
     src: natal,
