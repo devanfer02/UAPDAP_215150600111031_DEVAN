@@ -18,10 +18,10 @@ export default {
         'berry': '#C83F49'
       },
       backgroundImage: {
-        network: 'url(../assets/images/textures/network-white.png)',
-        network2: 'url(../assets/images/textures/network2.png)',
-        network3: 'url(../assets/images/textures/network3.png)',
-        network4: 'url(../assets/images/textures/network-white2.png)',
+        network: 'url(../assets/images/textures/network-white.webp)',
+        network2: 'url(../assets/images/textures/network2.webp)',
+        network3: 'url(../assets/images/textures/network3.webp)',
+        network4: 'url(../assets/images/textures/network-white2.webp)',
       },
       screens: {
         '2xl': '1320px'
