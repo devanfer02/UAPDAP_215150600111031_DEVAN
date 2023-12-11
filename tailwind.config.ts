@@ -22,7 +22,6 @@ export default {
         network2: 'url(../assets/images/textures/network2.png)',
         network3: 'url(../assets/images/textures/network3.png)',
         network4: 'url(../assets/images/textures/network-white2.png)',
-        grid: 'url(../assets/images/textures/grid2.png)',
       },
       screens: {
         '2xl': '1320px'

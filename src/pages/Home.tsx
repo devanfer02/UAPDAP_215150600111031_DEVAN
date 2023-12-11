@@ -44,7 +44,7 @@ function Hero() {
             </blockquote>
             <div className="lg:flex lg:flex-wrap">
               <Button text="About Me" link="/about" size="md"/>
-              <Socials fontColor="orange" hoverColor="white"/>
+              <Socials fontColor="orange" hoverColor="white" className="text-my-orange hover:text-my-white"/>
             </div>
           </div>
           <div className="w-full self-end px-4 lg:w-1/2">

@@ -1,13 +1,13 @@
-import agil from '../../assets/images/projects/agilportfolio.png'
-import calc from '../../assets/images/projects/calculator.png'
-import certi from '../../assets/images/projects/findcerti.png'
-import pbo from '../../assets/images/projects/guigame.png'
-import dapchall from '../../assets/images/projects/praktikum.png'
-import gokers from '../../assets/images/projects/gokers2.png'
-import soschat from '../../assets/images/projects/soschat2.png'
-import farewell from '../../assets/images/projects/farewell.png'
-import natal from '../../assets/images/projects/natal.png'
-import kbmdsi from '../../assets/images/projects/kbmdsi.png'
+import agil from '../../assets/images/projects/agilportfolio.jpg'
+import calc from '../../assets/images/projects/calculator.jpg'
+import certi from '../../assets/images/projects/findcerti.jpg'
+import pbo from '../../assets/images/projects/guigame.jpg'
+import dapchall from '../../assets/images/projects/praktikum.jpg'
+import gokers from '../../assets/images/projects/gokers2.jpg'
+import soschat from '../../assets/images/projects/soschat2.jpg'
+import farewell from '../../assets/images/projects/farewell.jpg'
+import natal from '../../assets/images/projects/natal.jpg'
+import kbmdsi from '../../assets/images/projects/kbmdsi.jpg'
 
 export const categories = ['Website', 'API', 'All', 'Java App', 'Design']
 

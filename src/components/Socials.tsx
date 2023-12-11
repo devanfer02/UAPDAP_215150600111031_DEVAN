@@ -5,6 +5,7 @@ import { colorTailwind, Color } from "../utils/color";
 interface SocialParams {
   fontColor: string;
   hoverColor: string;
+  className?: string;
 }
 
 const links = [
@@ -26,7 +27,7 @@ const links = [
   }
 ]
 
-export default function Socials( {fontColor, hoverColor}: SocialParams ): JSX.Element {
+export default function Socials( {fontColor, hoverColor, className }: SocialParams ): JSX.Element {
 
   return (
     <section className="flex my-auto">
@@ -41,7 +42,7 @@ export default function Socials( {fontColor, hoverColor}: SocialParams ): JSX.El
             icon={link.icon} 
             width={'35px'}
           className={`
-              ${colorTailwind[fontColor as keyof Color]} hover:${colorTailwind[hoverColor as keyof Color]} 
+              ${className ? className : colorTailwind[fontColor as keyof Color]} hover:${colorTailwind[hoverColor as keyof Color]} 
               transition duration-300 ease-in-out`}/>
         </Link>
         

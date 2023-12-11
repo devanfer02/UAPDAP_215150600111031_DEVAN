@@ -1,7 +1,7 @@
-import chall from '../../assets/images/projects/praktikum.png'
-import findcerti from '../../assets/images/projects/findcerti.png'
-import kbmweb from '../../assets/images/projects/kbmdsi.png'
-import agil from '../../assets/images/projects/agilportfolio.png'
+import chall from '../../assets/images/projects/praktikum.jpg'
+import findcerti from '../../assets/images/projects/findcerti.jpg'
+import kbmweb from '../../assets/images/projects/kbmdsi.jpg'
+import agil from '../../assets/images/projects/agilportfolio.jpg'
 
 export const works = [
   {
