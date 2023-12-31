@@ -67,9 +67,11 @@ function AboutInfo() {
         <h3 className="font-bold text-my-orange text-2xl mb-4 lg:text-3xl">
           Let's Connect
         </h3>
-        <p className="font-medium text-base text-my-navy mb-6 lg:text-lg">
+        <p className="font-medium text-base text-my-navy mb-6 lg:text-lg lg:w-[400px]">
           Let's connect through my social media so we can discuss about 
           our hobbies, especially if we share same hobby and make a project together!
+          Or if you need something from my service. I offered various service about programming in general, 
+          spesifically programming tutor and programming assignment completion service
         </p>
         <Socials fontColor="navy" hoverColor="orange"/>
       </div>

@@ -4,7 +4,6 @@ import { portfolios, categories } from "../utils/assets/assets.portfolio"
 import Card from "../components/Card"
 import ParticleContainer from "../components/ParticleContainer"
 
-
 export default function PortfolioPage() {
   const [ listPortfolios, setListPortfolios ] = useState(portfolios)
   const [ active, setActive ] = useState(categories[2])

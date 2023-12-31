@@ -31,7 +31,7 @@ const pages = [
   {
     path: '/portfolio',
     render: <PortfolioPage/>,
-    title: 'Works'
+    title: 'Portfolio'
   },
   {
     path: '/terminal',

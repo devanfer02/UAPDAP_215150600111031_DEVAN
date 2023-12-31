@@ -15,7 +15,7 @@ const links = [
   },
   {
     icon: 'mdi:linkedin',
-    path: 'https://www.linkedin.com/in/devanferrel/'
+    path: 'https://www.linkedin.com/in/dvnnfrr/'
   },
   {
     icon: 'mdi:github',

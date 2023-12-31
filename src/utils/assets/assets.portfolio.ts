@@ -8,6 +8,8 @@ import soschat from '../../assets/images/projects/soschat2.jpg'
 import farewell from '../../assets/images/projects/farewell.jpg'
 import natal from '../../assets/images/projects/natal.jpg'
 import kbmdsi from '../../assets/images/projects/kbmdsi.jpg'
+import psdfinal from '../../assets/images/projects/facerecon.png'
+import brun from '../../assets/images/projects/brunbites.png'
 
 export const categories = ['Website', 'API', 'All', 'Java App', 'Design']
 
@@ -45,16 +47,27 @@ export const portfolios: Portfolio[] = [
     link: 'https://devanfer02.github.io/find_your_rabraw22_certi/'
   },
   {
-    name: "DDM Game",
-    category: categories[3],
+    name: "DDLR Face Recon",
+    category: categories[0],
     desc: (
       `
-      DDM Game is a java gui game using javax swing library i created as a final project of Object Orriented Programming class.
-      It's a turn based game that utilizes the concept of object orriented paradigm. I also made it so it can play some background music too!
+      DDLR Face Recon is a final project from data science introduction class. It's a web application to recognize my face and my team member's face
+      using face_recognition library, opencv and others from a given image or live cam.
       `
     ),
-    src: pbo,
-    link: 'https://github.com/devanfer02/DDM-Game'
+    src: psdfinal,
+    link: 'https://github.com/devanfer02/DDLR-FaceRecon/'
+  },
+  {
+    name: 'Brun Bites',
+    category: categories[0],
+    desc: (
+      `
+      Brun bites is a website i developed as a part of my service.
+      `
+    ),
+    src: brun,
+    link: 'https://brun-bites.vercel.app/'
   },
   {
     name: "DAP Challenge",
@@ -113,6 +126,18 @@ export const portfolios: Portfolio[] = [
     ),
     src: kbmdsi,
     link: 'https://kbmdsi.ub.ac.id/'
+  },
+  {
+    name: "DDM Game",
+    category: categories[3],
+    desc: (
+      `
+      DDM Game is a java gui game using javax swing library i created as a final project of Object Orriented Programming class.
+      It's a turn based game that utilizes the concept of object orriented paradigm. I also made it so it can play some background music too!
+      `
+    ),
+    src: pbo,
+    link: 'https://github.com/devanfer02/DDM-Game'
   },
   {
     name: 'Farewell Poster',
