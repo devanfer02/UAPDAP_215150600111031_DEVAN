@@ -4,6 +4,7 @@ import Button from "../components/Button"
 import preview from '../assets/images/projects/terminal2.png'
 import hero from '../assets/images/profile/hero.png'
 import { works } from "../utils/assets/assets.home"
+import { Link } from "react-router-dom"
 
 function Hero() {
   const [ whSpan, setWhSpan ] = useState(window.innerWidth < 400 ? 350 : 400)
@@ -76,7 +77,9 @@ function Works() {
           <div className="w-full lg:w-1/2 self-center pr-5 ">
             <div className="columns-2 space-y-5 gap-5">
               { works.map((work, index) => (
-                <img src={work.src} alt="" className="" key={index} />
+                <Link key={index} to={work.link} className="block"> 
+                  <img src={work.src} alt="" className="" />
+                </Link>
               ))}
             </div>
           </div>
