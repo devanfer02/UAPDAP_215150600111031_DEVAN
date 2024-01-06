@@ -46,12 +46,10 @@ const pages = [
 ]
 
 export default function App() {
-
   return (
     <>
       <BrowserRouter>
         <Routes>
-          
           { pages.map((page, index) => (
             <Route
               key={index}
