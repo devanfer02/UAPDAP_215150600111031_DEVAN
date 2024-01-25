@@ -10,8 +10,9 @@ import natal from '../../assets/images/projects/natal.jpg'
 import kbmdsi from '../../assets/images/projects/kbmdsi.jpg'
 import psdfinal from '../../assets/images/projects/facerecon.png'
 import brun from '../../assets/images/projects/brunbites.png'
+import litecartes from '../../assets/images/projects/litecartes.png'
 
-export const categories = ['Website', 'API', 'All', 'Java App', 'Design']
+export const categories = ['Website', 'API', 'All', 'Software', 'Design']
 
 export interface Portfolio {
   name: string;
@@ -33,6 +34,17 @@ export const portfolios: Portfolio[] = [
     ),
     src: agil,
     link: 'https://hamdallaagil.vercel.app/'
+  },
+  {
+    name: "Litecartes",
+    category: categories[3],
+    desc: (
+      `
+      Litecartes is a mobile application aimed to improve literacy, reading interest and critical thinking of future generations. It used gamification aspects to attract users to read literacy text. 
+      `
+    ),
+    src: litecartes,
+    link: 'https://github.com/devanfer02/litecartes-be/'
   },
   {
     name: "Find Your Rabraw22 Certificate",
