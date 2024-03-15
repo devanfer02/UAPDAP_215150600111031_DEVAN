@@ -29,11 +29,6 @@ export default function WorksPage() {
                   dangerouslySetInnerHTML={ { __html: org.desc} }
                 >
                 </p>
-                { org.link && (
-                  <a href={org.link[0]} className="hover:text-blue-400 text-white hover:underline duration-200">
-                    { org.link[1] }
-                  </a>
-                )}
               </div>
             </div>
           ))}
