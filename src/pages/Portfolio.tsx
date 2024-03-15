@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react"
 const getMatrixVer = (arr: Portfolio[]) => {
   const newArr = []
   const copy = arr.slice()
-  while(copy.length) newArr.push(copy.splice(0,2))
+  while(copy.length) newArr.push(copy.splice(0,4))
 
   return newArr
 }
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
           </p>
         ))}
       </div>
-      <div className="w-full pb-100 mt-5 px-5 mx-auto mb-10 gap-5 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 inline-grid">
+      <div className="w-full pb-100 mt-5 px-5 mx-auto mb-10 gap-5 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 grid">
         { listPortfolios.map((portfolios, index) => (
           <div className="grid gap-4" key={index}>
             { portfolios.map((portfolio) => (
