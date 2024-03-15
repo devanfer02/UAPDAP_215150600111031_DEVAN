@@ -5,12 +5,11 @@ import pbo from '../../assets/images/projects/guigame.jpg'
 import dapchall from '../../assets/images/projects/praktikum.jpg'
 import gokers from '../../assets/images/projects/gokers2.jpg'
 import soschat from '../../assets/images/projects/soschat2.jpg'
-import farewell from '../../assets/images/projects/farewell.jpg'
-import natal from '../../assets/images/projects/natal.jpg'
 import kbmdsi from '../../assets/images/projects/kbmdsi.jpg'
 import psdfinal from '../../assets/images/projects/facerecon.png'
 import brun from '../../assets/images/projects/brunbites.png'
 import litecartes from '../../assets/images/projects/litecartes.png'
+import nosudes from '../../assets/images/projects/nosudes.png'
 
 export const categories = ['Website', 'API', 'All', 'Software', 'Design']
 
@@ -18,8 +17,9 @@ export interface Portfolio {
   name: string;
   category: string;
   desc: string;
-  src: string;
+  img: string;
   link: string;
+  techstacks: string[];
 }
 
 export const portfolios: Portfolio[] = [
@@ -32,8 +32,9 @@ export const portfolios: Portfolio[] = [
       All thanks to my team project for the design brief, UI kit, wireframe, and full design.
       `
     ),
-    src: agil,
-    link: 'https://hamdallaagil.vercel.app/'
+    img: agil,
+    link: 'https://hamdallaagil.vercel.app/',
+    techstacks: ['skill-icons:react-dark', 'skill-icons:bootstrap', 'skill-icons:javascript', 'skill-icons:css']
   },
   {
     name: "Litecartes",
@@ -43,8 +44,9 @@ export const portfolios: Portfolio[] = [
       Litecartes is a mobile application aimed to improve literacy, reading interest and critical thinking of future generations. It used gamification aspects to attract users to read literacy text. 
       `
     ),
-    src: litecartes,
-    link: 'https://github.com/devanfer02/litecartes-be/'
+    img: litecartes,
+    link: 'https://github.com/devanfer02/litecartes-be/',
+    techstacks: ['skill-icons:golang', 'devicon:firebase', 'skill-icons:mysql-light', 'logos:gin', 'logos:aws-ec2']
   },
   {
     name: "Find Your Rabraw22 Certificate",
@@ -55,8 +57,9 @@ export const portfolios: Portfolio[] = [
       to get their rabraw certificate since for some reason, rabraw committee thought its a good idea to distribute all the certificates in one Google Drive.
       `
     ),
-    src: certi,
-    link: 'https://devanfer02.github.io/find_your_rabraw22_certi/'
+    img: certi,
+    link: 'https://devanfer02.github.io/find_your_rabraw22_certi/',
+    techstacks: ['skill-icons:html', 'skill-icons:javascript', 'skill-icons:bootstrap']
   },
   {
     name: "DDLR Face Recon",
@@ -67,8 +70,9 @@ export const portfolios: Portfolio[] = [
       using face_recognition library, opencv and others from a given image or live cam.
       `
     ),
-    src: psdfinal,
-    link: 'https://github.com/devanfer02/DDLR-FaceRecon/'
+    img: psdfinal,
+    link: 'https://github.com/devanfer02/DDLR-FaceRecon/',
+    techstacks: ['skill-icons:python-light', 'skill-icons:flask-light', '']
   },
   {
     name: 'Brun Bites',
@@ -78,8 +82,9 @@ export const portfolios: Portfolio[] = [
       Brun bites is a website i developed as a part of my service.
       `
     ),
-    src: brun,
-    link: 'https://brun-bites.vercel.app/'
+    img: brun,
+    link: 'https://brun-bites.vercel.app/',
+    techstacks: ['skill-icons:html', 'skill-icons:tailwindcss-light']
   },
   {
     name: "DAP Challenge",
@@ -89,8 +94,9 @@ export const portfolios: Portfolio[] = [
       DAP Challenge is a challenge from lab assistant of User Interface Design class.
       `
     ),
-    src: dapchall,
-    link: 'https://devanfer02.github.io/dap-praktikum-challenge/'
+    img: dapchall,
+    link: 'https://devanfer02.github.io/dap-praktikum-challenge/',
+    techstacks: ['skill-icons:react-dark']
   },
   {
     name: "Calculator",
@@ -101,8 +107,9 @@ export const portfolios: Portfolio[] = [
       spesifically stack data structure to convert infix expression to postfix and evaluate it.
       `
     ),
-    src: calc,
-    link: 'https://devanfer02.github.io/calculator-app/'
+    img: calc,
+    link: 'https://devanfer02.github.io/calculator-app/',
+    techstacks: ['skill-icons:javascript']
   },
   {
     name: "Gokers",
@@ -113,8 +120,9 @@ export const portfolios: Portfolio[] = [
       I learned that database design is very important through the process of developing this API.
       `
     ),
-    src: gokers,
-    link: 'https://github.com/devanfer02/gokers/'
+    img: gokers,
+    link: 'https://github.com/devanfer02/gokers/',
+    techstacks: ['skill-icons:golang', 'skill-icons:mysql-light', 'logos:gin']
   },
   {
     name: 'Soschat',
@@ -124,20 +132,35 @@ export const portfolios: Portfolio[] = [
       Soschat is an social media API made with expressjs, sequelize, and mysql as database.
       `
     ),
-    src: soschat,
-    link: 'https://github.com/devanfer02/soschat-be/'
+    img: soschat,
+    link: 'https://github.com/devanfer02/soschat-be/',
+    techstacks: ['skill-icons:typescript', 'skill-icons:expressjs-dark', 'skill-icons:sequelize-dark']
   },
   {
     name: 'KBMDSI FILKOM Website',
     category: categories[0],
     desc: (
       `
+      KBMDSI FILKOM Website is a website containing about latest information about events in FILKOM UB.
       As a backend developer, i partake in developing backend API and CMS using tech stack
       laravel and mysql.
       `
     ),
-    src: kbmdsi,
-    link: 'https://kbmdsi.ub.ac.id/'
+    img: kbmdsi,
+    link: 'https://kbmdsi.ub.ac.id/',
+    techstacks: ['skill-icons:laravel-dark', 'skill-icons:mysql-light', 'skill-icons:php-dark']
+  },
+  {
+    name: 'Nosudes',
+    category: categories[0],
+    desc: (
+      `Nosudes is a website that contains information about tourist attractions and events in North Sumatra.
+      Nosudes was created to support the development of tourism in the North Sumatra region and show the beauty of Indonesia.
+      As a backend developer, i created the backend of the website using golang and gin`
+    ),
+    img: nosudes,
+    link: 'https://no-su-des.vercel.app/',
+    techstacks: ['skill-icons:golang', 'devicon:firebase', 'skill-icons:mysql-light', 'logos:gin', 'logos:aws-ec2']
   },
   {
     name: "DDM Game",
@@ -148,29 +171,8 @@ export const portfolios: Portfolio[] = [
       It's a turn based game that utilizes the concept of object orriented paradigm. I also made it so it can play some background music too!
       `
     ),
-    src: pbo,
-    link: 'https://github.com/devanfer02/DDM-Game'
-  },
-  {
-    name: 'Farewell Poster',
-    category: categories[4],
-    desc: (
-      `
-      Farewell poster is an poster design made for farewell party Rohkris SMAN 14 Bekasi.
-      `
-    ),
-    src: farewell,
-    link: ''
-  },
-  {
-    name: 'Christmas Poster',
-    category: categories[4],
-    desc: (
-      `
-      Christmas poster is an poster design made for christmas event Rohkris SMAN 14 Bekasi.
-      `
-    ),
-    src: natal,
-    link: ''
-  }, 
+    img: pbo,
+    link: 'https://github.com/devanfer02/DDM-Game',
+    techstacks: ['skill-icons:java-dark']
+  }
 ]

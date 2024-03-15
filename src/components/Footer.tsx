@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 const socials = [
   {
     icon: 'mdi:instagram',
-    path: 'https://www.instagram.com/dvnf20/'
+    path: 'https://www.instagram.com/dvnnfrr/'
   },
   {
     icon: 'mdi:linkedin',

@@ -21,7 +21,7 @@ export default function Button({ text, size, link }: ButtonParams): JSX.Element 
         href={link}
         className={`text-base font-semibold 
           text-white bg-my-orange
-          ${sizeVariants[size as keyof Size]} rounded-full
+          ${sizeVariants[size as keyof Size]} rounded-2xl
           hover:border-my-orange hover:bg-my-white hover:text-my-orange
           transition duration-300 ease-in-out`}
       >

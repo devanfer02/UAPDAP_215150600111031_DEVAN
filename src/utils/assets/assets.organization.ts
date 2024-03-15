@@ -1,6 +1,5 @@
 import bcc from '../../assets/images/organization/bcc3.jpeg'
 import kbm from '../../assets/images/organization/kbmdsi.png'
-import rohkris from '../../assets/images/organization/rohkris.png'
 
 export const organization = [
   {
@@ -28,22 +27,5 @@ export const organization = [
       called Studi Banding, the first one.
       `
     )
-  },
-  {
-    name: 'Rohkris SMAN 14 Bekasi',
-    src: rohkris,
-    position: 'Lead of Documentation Division',
-    desc: (
-      `
-      As a lead of documentation division, my job is to coordinate instagram feed design
-      so it follows the event theme, coordinate and organize to make short film for specific events
-      and also design poster for annual event like new year, christmas and others. 
-      You can find the short movies through this link :
-      `
-    ),
-    link: [
-      'https://www.youtube.com/@devanferrel9605/videos',
-      'short movies'
-    ]
   }
 ]
