@@ -11,7 +11,7 @@ interface SocialParams {
 const links = [
   {
     icon: 'mdi:instagram',
-    path: 'https://www.instagram.com/dvnf20/'
+    path: 'https://www.instagram.com/dvnnfrr/'
   },
   {
     icon: 'mdi:linkedin',
