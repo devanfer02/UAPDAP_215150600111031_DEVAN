@@ -32,10 +32,10 @@ export default function ParticleContainer(
             value: ''
           }
         },
-        fpsLimit: 30,
+        fpsLimit: 29,
         interactivity: {
           events: {
-            resize: true
+            resize: false
           },
         },
         particles: {
@@ -59,7 +59,7 @@ export default function ParticleContainer(
               default: 'bounce'
             },
             random: true,
-            speed: 1,
+            speed: 0.7,
             straight: false,
           },
           number: {
@@ -67,7 +67,7 @@ export default function ParticleContainer(
               enable: true,
               area: 800
             },
-            value: 70
+            value: 60
           },
           opacity: {
             value: 0.5

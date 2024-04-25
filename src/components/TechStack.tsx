@@ -5,22 +5,27 @@ import Card from './Card'
 const skills = [
   {
     name: 'C++',
-    icon: 'devicon:cplusplus',
+    icon: 'skill-icons:cpp',
     link: 'https://www.w3schools.com/cpp/'
   },
   {
-    name: 'Java',
-    icon: 'devicon:java',
-    link: 'https://www.java.com/en/'
+    name: 'Bootstrap',
+    icon: 'skill-icons:bootstrap',
+    link: 'https://getbootstrap.com/'
+  },
+  {
+    name: 'Docker',
+    icon: 'skill-icons:docker',
+    link: 'https://www.docker.com/'
   },
   {
     name: 'Javascript',
-    icon: 'devicon:javascript',
+    icon: 'skill-icons:javascript',
     link: 'https://www.w3schools.com/js/'
   },
   {
     name: 'Typescript',
-    icon: 'devicon:typescript',
+    icon: 'skill-icons:typescript',
     link: 'https://www.typescriptlang.org/'
   },
   {
@@ -30,27 +35,37 @@ const skills = [
   },
   {
     name: 'Linux',
-    icon: 'devicon:linux',
+    icon: 'skill-icons:linux-light',
     link: 'https://ubuntu.com/'
   },
   {
     name: 'Laravel',
-    icon: 'devicon:laravel',
+    icon: 'skill-icons:laravel-light',
     link: 'https://laravel.com/'
   },
   {
+    name: 'Java',
+    icon: 'skill-icons:java-light',
+    link: 'https://www.java.com/en/'
+  },
+  {
+    name: 'PHP',
+    icon: 'skill-icons:php-light',
+    link: 'https://www.php.net'
+  },
+  {
     name: 'Python',
-    icon: 'devicon:python',
+    icon: 'skill-icons:python-light',
     link: 'https://www.python.org/'
   },
   {
     name: 'MySQL',
-    icon: 'devicon:mysql-wordmark',
+    icon: 'skill-icons:mysql-light',
     link: 'https://www.mysql.com/'
   },
   {
     name: 'Nodejs',
-    icon: 'devicon:nodejs',
+    icon: 'skill-icons:nodejs-light',
     link: 'https://nodejs.org/en'
   },
   {
@@ -60,19 +75,14 @@ const skills = [
   },
   {
     name: 'React',
-    icon: 'logos:react',
+    icon: 'skill-icons:react-light',
     link: 'https://react.dev/'
   },
   {
-    name: 'Bootstrap',
-    icon: 'devicon:bootstrap',
-    link: 'https://getbootstrap.com/'
-  },
-  {
     name: 'Tailwindcss',
-    icon: 'devicon:tailwindcss',
+    icon: 'skill-icons:tailwindcss-light',
     link: 'https://tailwindcss.com/'
-  }
+  },
 ]
 
 export default function TechStack(): JSX.Element {

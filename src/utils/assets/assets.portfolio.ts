@@ -1,5 +1,4 @@
 import agil from '../../assets/images/projects/agilportfolio.jpg'
-import calc from '../../assets/images/projects/calculator.jpg'
 import certi from '../../assets/images/projects/findcerti.jpg'
 import pbo from '../../assets/images/projects/guigame.jpg'
 import dapchall from '../../assets/images/projects/praktikum.jpg'
@@ -10,8 +9,9 @@ import psdfinal from '../../assets/images/projects/facerecon.png'
 import brun from '../../assets/images/projects/brunbites.png'
 import litecartes from '../../assets/images/projects/litecartes.png'
 import nosudes from '../../assets/images/projects/nosudes.png'
+import ubmager from '../../assets/images/projects/ubmager.png'
 
-export const categories = ['Website', 'API', 'All', 'Software', 'Design']
+export const categories = ['Website', 'API', 'All', 'Software']
 
 export interface Portfolio {
   name: string;
@@ -34,7 +34,7 @@ export const portfolios: Portfolio[] = [
     ),
     img: agil,
     link: 'https://hamdallaagil.vercel.app/',
-    techstacks: ['skill-icons:react-dark', 'skill-icons:bootstrap', 'skill-icons:javascript', 'skill-icons:css']
+    techstacks: ['skill-icons:react-light', 'skill-icons:bootstrap', 'skill-icons:javascript', 'skill-icons:css']
   },
   {
     name: "Litecartes",
@@ -46,7 +46,7 @@ export const portfolios: Portfolio[] = [
     ),
     img: litecartes,
     link: 'https://github.com/devanfer02/litecartes-be/',
-    techstacks: ['skill-icons:golang', 'devicon:firebase', 'skill-icons:mysql-light', 'logos:gin', 'logos:aws-ec2']
+    techstacks: ['skill-icons:golang', 'devicon:firebase', 'skill-icons:mysql-light', 'logos:gin', 'logos:aws-ec2', 'skill-icons:react-light' , 'skill-icons:tailwindcss-light' ]
   },
   {
     name: "Find Your Rabraw22 Certificate",
@@ -72,14 +72,14 @@ export const portfolios: Portfolio[] = [
     ),
     img: psdfinal,
     link: 'https://github.com/devanfer02/DDLR-FaceRecon/',
-    techstacks: ['skill-icons:python-light', 'skill-icons:flask-light', '']
+    techstacks: ['skill-icons:python-light', 'skill-icons:flask-light', 'skill-icons:tailwindcss-light']
   },
   {
     name: 'Brun Bites',
     category: categories[0],
     desc: (
       `
-      Brun bites is a website i developed as a part of my service.
+      Brun bites is a website i developed to showcase a food business called BRUN.
       `
     ),
     img: brun,
@@ -96,20 +96,21 @@ export const portfolios: Portfolio[] = [
     ),
     img: dapchall,
     link: 'https://devanfer02.github.io/dap-praktikum-challenge/',
-    techstacks: ['skill-icons:react-dark']
+    techstacks: ['skill-icons:react-light', 'skill-icons:css', 'skill-icons:bootstrap']
   },
   {
-    name: "Calculator",
+    name: 'UB Mager Apps',
     category: categories[0],
     desc: (
       `
-      I made this calculator as a lab assignment of User Interface Design class to implement data structure and algorithm, 
-      spesifically stack data structure to convert infix expression to postfix and evaluate it.
+      UB Mager is a web application based on ub mager community in whatsapp group. Its a form of digitalisation
+      where now, instead of divided multiple whatsapp groups, student can login to web app using their SIAM credentials
+      and asked others for help or errands in one web application
       `
     ),
-    img: calc,
-    link: 'https://devanfer02.github.io/calculator-app/',
-    techstacks: ['skill-icons:javascript']
+    img: ubmager,
+    link: 'https://github.com/devanfer02/ubmager',
+    techstacks: ['skill-icons:laravel-light', 'skill-icons:mysql-light', 'skill-icons:php-light', 'skill-icons:tailwindcss-light', 'skill-icons:bootstrap']
   },
   {
     name: "Gokers",
@@ -134,7 +135,7 @@ export const portfolios: Portfolio[] = [
     ),
     img: soschat,
     link: 'https://github.com/devanfer02/soschat-be/',
-    techstacks: ['skill-icons:typescript', 'skill-icons:expressjs-dark', 'skill-icons:sequelize-dark']
+    techstacks: ['skill-icons:typescript', 'skill-icons:expressjs-light', 'skill-icons:sequelize-light']
   },
   {
     name: 'KBMDSI FILKOM Website',
@@ -148,7 +149,7 @@ export const portfolios: Portfolio[] = [
     ),
     img: kbmdsi,
     link: 'https://kbmdsi.ub.ac.id/',
-    techstacks: ['skill-icons:laravel-dark', 'skill-icons:mysql-light', 'skill-icons:php-dark']
+    techstacks: ['skill-icons:laravel-light', 'skill-icons:mysql-light', 'skill-icons:php-light', 'skill-icons:bootstrap']
   },
   {
     name: 'Nosudes',
@@ -173,6 +174,6 @@ export const portfolios: Portfolio[] = [
     ),
     img: pbo,
     link: 'https://github.com/devanfer02/DDM-Game',
-    techstacks: ['skill-icons:java-dark']
+    techstacks: ['skill-icons:java-light']
   }
 ]

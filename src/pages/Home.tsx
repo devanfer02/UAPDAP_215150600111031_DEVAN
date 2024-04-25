@@ -38,7 +38,7 @@ function Hero() {
               </span>
             </h1>
             <h2 className="font-medium text-lg lg:text-2xl">
-              Student | Backend Developer | Competitive Programmer
+              Student | Fullstack Developer | Competitive Programmer
             </h2>
             <blockquote className="font-medium mb-2 text-my-lightgray">
               "It's not always as we wanted, but we grow <span className="text-berry">stronger</span> when we <span className="text-berry">break</span>."

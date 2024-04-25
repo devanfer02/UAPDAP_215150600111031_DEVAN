@@ -8,7 +8,7 @@ import { Icon } from "@iconify/react"
 const getMatrixVer = (arr: Portfolio[]) => {
   const newArr = []
   const copy = arr.slice()
-  while(copy.length) newArr.push(copy.splice(0,4))
+  while(copy.length) newArr.push(copy.splice(0,1))
 
   return newArr
 }
@@ -48,7 +48,7 @@ export default function PortfolioPage() {
           <p 
             key={index} 
             className={`
-              lg:mx-4 mx-1 w-50 ${getCategoryClass(category)} 
+              lg:mx-2 mx-1 w-50 ${getCategoryClass(category)} 
               lg:px-3 px-2 py-1 rounded-2xl uppercase font-bold
               cursor-pointer duration-300 ease-in-out text-sm mt-1 lg:mt-0`
             }
@@ -94,7 +94,7 @@ export default function PortfolioPage() {
                             icon={techstack} 
                             key={techstack} 
                             width={34} height={34} 
-                            className="mr-2 bg-white rounded-full"
+                            className="mr-2 bg-white rounded-xl"
                           />
                         ))}
                       </div>
