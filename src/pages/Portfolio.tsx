@@ -67,7 +67,7 @@ export default function PortfolioPage() {
                   <img 
                     src={portfolio.img} 
                     alt={portfolio.name} 
-                    className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg" 
+                    className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg max-h-[300px]" 
                     loading="lazy"
                   />
                 </Link>

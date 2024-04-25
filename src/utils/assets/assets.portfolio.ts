@@ -28,8 +28,8 @@ export const portfolios: Portfolio[] = [
     category: categories[0],
     desc: (
       `
-      Hamdalla Agil's Portfolio is a web profile i developed as the final project for User Interface Design class.
-      All thanks to my team project for the design brief, UI kit, wireframe, and full design.
+      Hamdalla Agil's Portfolio is a web portfolio i developed as the final project for User Interface Design class.
+      All thanks to my team project for the design brief, UI kit, wireframe, and hifi design.
       `
     ),
     img: agil,
@@ -41,7 +41,9 @@ export const portfolios: Portfolio[] = [
     category: categories[3],
     desc: (
       `
-      Litecartes is a mobile application aimed to improve literacy, reading interest and critical thinking of future generations. It used gamification aspects to attract users to read literacy text. 
+      Litecartes is a mobile application aimed to improve literacy, reading interest and critical thinking of future generations. 
+      It use gamification aspects to attract users to read literacy text. As a backend developer, i developed the server side part using golang, gin, created 
+      content management system with react and deploy it to AWS EC2
       `
     ),
     img: litecartes,
@@ -66,37 +68,13 @@ export const portfolios: Portfolio[] = [
     category: categories[0],
     desc: (
       `
-      DDLR Face Recon is a final project from data science introduction class. It's a web application to recognize my face and my team member's face
+      DDLR Face Recon is a final project from Data Science Introduction class. It's a web application to recognize my face and my team member's face
       using face_recognition library, opencv and others from a given image or live cam.
       `
     ),
     img: psdfinal,
     link: 'https://github.com/devanfer02/DDLR-FaceRecon/',
     techstacks: ['skill-icons:python-light', 'skill-icons:flask-light', 'skill-icons:tailwindcss-light']
-  },
-  {
-    name: 'Brun Bites',
-    category: categories[0],
-    desc: (
-      `
-      Brun bites is a website i developed to showcase a food business called BRUN.
-      `
-    ),
-    img: brun,
-    link: 'https://brun-bites.vercel.app/',
-    techstacks: ['skill-icons:html', 'skill-icons:tailwindcss-light']
-  },
-  {
-    name: "DAP Challenge",
-    category: categories[0],
-    desc: (
-      `
-      DAP Challenge is a challenge from lab assistant of User Interface Design class.
-      `
-    ),
-    img: dapchall,
-    link: 'https://devanfer02.github.io/dap-praktikum-challenge/',
-    techstacks: ['skill-icons:react-light', 'skill-icons:css', 'skill-icons:bootstrap']
   },
   {
     name: 'UB Mager Apps',
@@ -111,31 +89,6 @@ export const portfolios: Portfolio[] = [
     img: ubmager,
     link: 'https://github.com/devanfer02/ubmager',
     techstacks: ['skill-icons:laravel-light', 'skill-icons:mysql-light', 'skill-icons:php-light', 'skill-icons:tailwindcss-light', 'skill-icons:bootstrap']
-  },
-  {
-    name: "Gokers",
-    category: categories[1],
-    desc: (
-      `
-      Gokers is an API made with golang, gin, gorm and mysql as database. Inspired by Universitas Brawijaya's study plan card system.
-      I learned that database design is very important through the process of developing this API.
-      `
-    ),
-    img: gokers,
-    link: 'https://github.com/devanfer02/gokers/',
-    techstacks: ['skill-icons:golang', 'skill-icons:mysql-light', 'logos:gin']
-  },
-  {
-    name: 'Soschat',
-    category: categories[1],
-    desc: (
-      `
-      Soschat is an social media API made with expressjs, sequelize, and mysql as database.
-      `
-    ),
-    img: soschat,
-    link: 'https://github.com/devanfer02/soschat-be/',
-    techstacks: ['skill-icons:typescript', 'skill-icons:expressjs-light', 'skill-icons:sequelize-light']
   },
   {
     name: 'KBMDSI FILKOM Website',
@@ -175,5 +128,54 @@ export const portfolios: Portfolio[] = [
     img: pbo,
     link: 'https://github.com/devanfer02/DDM-Game',
     techstacks: ['skill-icons:java-light']
-  }
+  },
+  {
+    name: 'Brun Bites',
+    category: categories[0],
+    desc: (
+      `
+      Brun bites is a website i developed to showcase a food business called BRUN.
+      `
+    ),
+    img: brun,
+    link: 'https://brun-bites.vercel.app/',
+    techstacks: ['skill-icons:html', 'skill-icons:tailwindcss-light', 'skill-icons:javascript']
+  },
+  {
+    name: "DAP Challenge",
+    category: categories[0],
+    desc: (
+      `
+      DAP Challenge is a challenge from lab assistant of User Interface Design class.
+      `
+    ),
+    img: dapchall,
+    link: 'https://devanfer02.github.io/dap-praktikum-challenge/',
+    techstacks: ['skill-icons:react-light', 'skill-icons:css', 'skill-icons:bootstrap']
+  },
+  {
+    name: "Gokers",
+    category: categories[1],
+    desc: (
+      `
+      Gokers is an API made with golang, gin, gorm and mysql as database. Inspired by Universitas Brawijaya's study plan card system.
+      I learned that database design is very important through the process of developing this API.
+      `
+    ),
+    img: gokers,
+    link: 'https://github.com/dvnf10cpp/gokers/',
+    techstacks: ['skill-icons:golang', 'skill-icons:mysql-light', 'logos:gin']
+  },
+  {
+    name: 'Soschat',
+    category: categories[1],
+    desc: (
+      `
+      Soschat is an social media API made with expressjs, sequelize, and mysql as database.
+      `
+    ),
+    img: soschat,
+    link: 'https://github.com/devanfer02/soschat-be/',
+    techstacks: ['skill-icons:typescript', 'skill-icons:expressjs-light', 'skill-icons:sequelize-light']
+  },
 ]
