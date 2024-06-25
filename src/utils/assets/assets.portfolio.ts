@@ -10,6 +10,7 @@ import brun from '../../assets/images/projects/brunbites.png'
 import litecartes from '../../assets/images/projects/litecartes.png'
 import nosudes from '../../assets/images/projects/nosudes.png'
 import ubmager from '../../assets/images/projects/ubmager.png'
+import tels from '../../assets/images/projects/tels.png'
 
 export const categories = ['Website', 'API', 'All', 'Software']
 
@@ -49,6 +50,19 @@ export const portfolios: Portfolio[] = [
     img: litecartes,
     link: 'https://github.com/devanfer02/litecartes-be/',
     techstacks: ['skill-icons:golang', 'devicon:firebase', 'skill-icons:mysql-light', 'logos:gin', 'logos:aws-ec2', 'skill-icons:react-light' , 'skill-icons:tailwindcss-light' ]
+  },
+  {
+    name: "TELS E-Course",
+    category: categories[0],
+    desc: (
+      `
+      TELS is a fullstack e-course platform project made as a final project Manajemen Pembelajaran dan Sumber Belajar class. 
+      As a fullstack developer, I designed the application database, developed the application with user dashboard and admin dashboard, and deployed to a hosting service 
+      `
+    ),
+    img: tels,
+    link: 'https://github.com/devanfer02/tels-e-course',
+    techstacks: ['skill-icons:laravel-light', 'skill-icons:mysql-light', 'skill-icons:php-light', 'skill-icons:tailwindcss-light', 'skill-icons:bootstrap', 'devicon:firebase']
   },
   {
     name: "Find Your Rabraw22 Certificate",
