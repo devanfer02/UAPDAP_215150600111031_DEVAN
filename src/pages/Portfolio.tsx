@@ -63,11 +63,11 @@ export default function PortfolioPage() {
           <div className="grid gap-4" key={index}>
             { portfolios.map((portfolio) => (
               <Card className="group" key={portfolio.name}>
-                <Link to={portfolio.link} target="_blank" className="flex justify-center items-center bg-my-orange rounded-t-lg">
+                <Link to={portfolio.link} target="_blank" className="flex justify-center items-center bg-my-orange rounded-t-lg h-[300px] lg:h-[200px] ">
                   <img 
                     src={portfolio.img} 
                     alt={portfolio.name} 
-                    className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg max-h-[300px]" 
+                    className="cursor-pointer group-hover:brightness-50 duration-200 ease-in-out rounded-t-lg object-cover w-full h-full" 
                     loading="lazy"
                   />
                 </Link>

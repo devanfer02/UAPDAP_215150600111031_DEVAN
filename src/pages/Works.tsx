@@ -21,10 +21,11 @@ export default function WorksPage() {
                 <img src={org.src} alt="" className="max-h-[150px] lg:mx-auto rounded-l-lg" />
               </div>
               <div className="w-full lg:w-4/5 self-center p-8">
-                <h1 className="uppercase text-2xl text-my-navy font-bold mb-1">
+                <h1 className="uppercase text-2xl text-my-navy font-bold mb-0">
                   {org.name}
                 </h1>
-                <p className="font-semibold mb-2">{org.position}</p>
+                <span className="font-semibold block">{org.position}</span>
+                <div className="h-[1px] bg-my-navy mb-2 "></div>
                 <p 
                   className=""
                   dangerouslySetInnerHTML={ { __html: org.desc} }

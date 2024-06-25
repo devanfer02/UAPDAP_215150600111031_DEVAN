@@ -8,7 +8,7 @@ export const organization = [
     position: 'Vice Head of Information Technology Division',
     desc: (
       `As a vice head of information technology division, i defined system requirements described by other division, designed database for the application, 
-      lead a team of backend developers with techstack golang, gin, gorm and also participate in developing the backend, create unit tests and CI/CD with github worflow`
+      lead a team of backend developers with techstack golang, gin, gorm and also participate in developing the backend, create unit tests and CI/CD with github workflow`
     ),
   },
   {
