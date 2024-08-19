@@ -91,20 +91,6 @@ export const portfolios: Portfolio[] = [
     techstacks: ['skill-icons:python-light', 'skill-icons:flask-light', 'skill-icons:tailwindcss-light']
   },
   {
-    name: 'UB Mager Apps',
-    category: categories[0],
-    desc: (
-      `
-      UB Mager is a web application based on ub mager community in whatsapp group. Its a form of digitalisation
-      where now, instead of divided multiple whatsapp groups, student can login to web app using their SIAM credentials
-      and asked others for help or errands in one web application
-      `
-    ),
-    img: ubmager,
-    link: 'https://github.com/devanfer02/ubmager',
-    techstacks: ['skill-icons:laravel-light', 'skill-icons:mysql-light', 'skill-icons:php-light', 'skill-icons:tailwindcss-light', 'skill-icons:bootstrap']
-  },
-  {
     name: 'KBMDSI FILKOM Website',
     category: categories[0],
     desc: (
