@@ -9,7 +9,6 @@ import psdfinal from '../../assets/images/projects/facerecon.png'
 import brun from '../../assets/images/projects/brunbites.png'
 import litecartes from '../../assets/images/projects/litecartes.png'
 import nosudes from '../../assets/images/projects/nosudes.png'
-import ubmager from '../../assets/images/projects/ubmager.png'
 import tels from '../../assets/images/projects/tels.png'
 
 export const categories = ['Website', 'API', 'All', 'Software']
